@@ -45,7 +45,7 @@ class autoencoder(nn.Module):
         return s, y
 
 
-model = autoencoder([3, 50, 30, 2]).cuda()
+model = autoencoder([3, 200, 100, 50, 30, 2]).cuda()
 criterion = mse_loss
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5)
 
